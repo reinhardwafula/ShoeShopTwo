@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import kotlin.system.exitProcess
 
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +26,7 @@ class RegisterActivity : AppCompatActivity() {
         val firstName: EditText = findViewById(R.id.firstNameRegister)
         val lastName: EditText = findViewById(R.id.lastNameRegister)
         val phoneNumber: EditText = findViewById(R.id.editTextPhone)
-        val confirmPassword: EditText = findViewById(R.id.confirmPasswordRegister)
+        //val confirmPassword: EditText = findViewById(R.id.confirmPasswordRegister)
 
         tvLogin.setOnClickListener {
             startActivity(intent)
@@ -45,11 +46,6 @@ class RegisterActivity : AppCompatActivity() {
             when {
                 TextUtils.isEmpty(phoneNumber.text.toString().trim { it <= ' ' }) -> {
                     Toast.makeText(this, "Please enter your phone number.", Toast.LENGTH_LONG).show()
-                }
-            }
-            when {
-                confirmPassword != passwordRegister -> {
-                    Toast.makeText(this, "Passwords do not match", Toast.LENGTH_LONG).show()
                 }
             }
             when {

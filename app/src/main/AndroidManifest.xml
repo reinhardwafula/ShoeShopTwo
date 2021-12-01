@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ShoeShop">
         <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".LoginActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
