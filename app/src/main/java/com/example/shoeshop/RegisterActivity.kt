@@ -22,6 +22,8 @@ class RegisterActivity : AppCompatActivity() {
         val registerButton: Button = findViewById(R.id.registerButton)
         val emailRegister: EditText = findViewById(R.id.emailRegister)
         val passwordRegister: EditText = findViewById(R.id.passwordRegister)
+        //val avPr: TextView = findViewById(R.id.textView)
+
 
         val firstName: EditText = findViewById(R.id.firstNameRegister)
         val lastName: EditText = findViewById(R.id.lastNameRegister)
@@ -58,6 +60,8 @@ class RegisterActivity : AppCompatActivity() {
                     Toast.makeText(this, "Please enter password.", Toast.LENGTH_LONG).show()
                 }
                 else -> {
+                    //val firstNameGiven: String = firstName.text.toString().trim{ it <= ' ' }
+                    //avPr.text = "Welcome $firstNameGiven"
                     val email: String = emailRegister.text.toString().trim { it <= ' ' }
                     val password: String = passwordRegister.text.toString().trim { it <= ' ' }
 
@@ -68,7 +72,7 @@ class RegisterActivity : AppCompatActivity() {
 
                                 Toast.makeText(this, "You are registered successfully", Toast.LENGTH_LONG).show()
 
-                                val intent = Intent(this, DashboardActivity::class.java)
+                                val intent = Intent(this, MainActivity::class.java)
                                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                                 intent.putExtra("user_id", firebaseUser.uid)
                                 intent.putExtra("email_id", email)
