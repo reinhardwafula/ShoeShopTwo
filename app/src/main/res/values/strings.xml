@@ -1,9 +1,9 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Shoe Shop</string>
     <!--<string name="title_activity_dashboard">DashboardActivity</string>-->
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
-    <string name="please_click_back_again_to_exit">Please click back again to exit</string>
+    <string name="please_click_back_again_to_exit" tools:ignore="ExtraTranslation">Please click back again to exit</string><string name="click_back_again_to_exit" tools:ignore="ExtraTranslation">Please click back again to exit</string>
 </resources>
